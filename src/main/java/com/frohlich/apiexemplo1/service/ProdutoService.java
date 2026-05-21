@@ -18,4 +18,20 @@ public class ProdutoService {
         System.out.println("Service -> listando produtos....");
         return repository.buscarTodos();
     }
+
+    public Produto buscarPorId(Long id){
+        return repository.buscarPorId(id);
+    }
+
+    public Produto cadastrar(Produto produto){
+        return repository.salvar(produto);
+    }
+
+    public Produto atualizar(Long id, Produto produto){
+        return repository.atualizar(id, produto);
+    }
+
+    public boolean deletar(Long id){
+        return repository.deletar(id);
+    }
 }
